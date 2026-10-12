@@ -1,98 +1,111 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090b12">
-  <meta name="description" content="A community-friendly guide to understanding electric scooter tuning, diagnostics and safer setup choices.">
-  <title>HOT TO TUNE // Electric Scooter Lab</title>
+  <meta name="description" content="Deutschsprachige Wissensdatenbank für E-Scooter: Modelle, Technik, Diagnose, Einstellungen und Sicherheit – markenübergreifend.">
+  <title>HOT TO TUNE // E-Scooter Labor</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="scanlines" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="brand" href="#home" aria-label="Hot to Tune home"><span class="brand-mark">H//T</span><span>HOT TO <b>TUNE</b></span></a>
-    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">☰ <span class="sr-only">Menu</span></button>
+    <a class="brand" href="#startseite" aria-label="Hot to Tune Startseite"><span class="brand-mark">H//T</span><span>HOT TO <b>TUNE</b></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">☰ <span class="sr-only">Menü öffnen</span></button>
     <nav id="navLinks">
-      <a href="#start">START HERE</a><a href="#setup">SETUP LAB</a><a href="#safety">SAFETY</a><a href="#glossary">GLOSSARY</a>
+      <a href="#modelle">MODELLE</a><a href="#labor">EINSTELLUNGEN</a><a href="#sicherheit">SICHERHEIT</a><a href="#lexikon">LEXIKON</a>
     </nav>
   </header>
 
-  <main id="home">
+  <main id="startseite">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="pulse"></span> COMMUNITY SCOOTER KNOWLEDGE BASE</p>
-        <h1>MAKE IT YOURS.<br><em>KEEP IT SAFE.</em></h1>
-        <p class="hero-text">Understand your electric scooter, learn what the settings mean, and build a setup that respects the limits of your hardware.</p>
-        <div class="hero-actions"><a class="button primary" href="#start">START LEARNING <span>↘</span></a><a class="button ghost" href="#safety">SAFETY FIRST</a></div>
-        <div class="hero-stats"><div><strong>01</strong><span>KNOW YOUR MODEL</span></div><div><strong>02</strong><span>CHECK THE LIMITS</span></div><div><strong>03</strong><span>CHANGE ONE THING</span></div></div>
+        <p class="eyebrow"><span class="pulse"></span> DIE DEUTSCHSPRACHIGE E-SCOOTER-WISSENSDATENBANK</p>
+        <h1>KENNE DEINEN SCOOTER.<br><em>FAHR MIT VERSTAND.</em></h1>
+        <p class="hero-text">Technik verstehen, Modelle vergleichen und Einstellungen besser einordnen – markenübergreifend, verständlich und mit Sicherheit im Blick.</p>
+        <div class="hero-actions"><a class="button primary" href="#modelle">MODELLE ENTDECKEN <span>↘</span></a><a class="button ghost" href="#sicherheit">SICHERHEIT ZUERST</a></div>
+        <div class="hero-stats"><div><strong>01</strong><span>MODELL IDENTIFIZIEREN</span></div><div><strong>02</strong><span>GRENZEN PRÜFEN</span></div><div><strong>03</strong><span>ÄNDERUNGEN DOKUMENTIEREN</span></div></div>
       </div>
-      <div class="hero-visual" aria-label="Abstract neon scooter dashboard illustration" role="img">
+      <div class="hero-visual" aria-label="Abstrakte Neon-Illustration eines E-Scooters" role="img">
         <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
         <div class="scooter-icon"><div class="deck"></div><div class="stem"></div><div class="handle"></div><div class="wheel wheel-a"></div><div class="wheel wheel-b"></div><div class="light"></div></div>
-        <div class="hud hud-top"><span>SYS.STATUS</span><b>READY / CHECK LIMITS</b></div>
-        <div class="hud hud-bottom"><span>RIDER PROTOCOL</span><b>LEARN · VERIFY · TEST</b></div>
+        <div class="hud hud-top"><span>SYSTEMSTATUS</span><b>PRÜFEN / VERIFIZIEREN</b></div>
+        <div class="hud hud-bottom"><span>GRUNDSATZ</span><b>LERNEN · PRÜFEN · TESTEN</b></div>
         <div class="crosshair">+</div>
       </div>
     </section>
 
-    <section class="section" id="start">
-      <div class="section-heading"><p class="eyebrow">/ 01 — ORIENTATION</p><h2>FIRST, KNOW YOUR MACHINE.</h2><p>Before touching firmware or controller values, identify the exact scooter variant and its components.</p></div>
-      <div class="card-grid">
-        <article class="info-card"><div class="card-number">01</div><div class="card-icon">⌁</div><h3>IDENTIFY</h3><p>Record the model, hardware revision, battery configuration, controller and firmware version.</p><span class="tag">BASELINE</span></article>
-        <article class="info-card"><div class="card-number">02</div><div class="card-icon">⌘</div><h3>UNDERSTAND</h3><p>Learn what each setting controls. Similar names can behave differently across firmware versions.</p><span class="tag">RESEARCH</span></article>
-        <article class="info-card"><div class="card-number">03</div><div class="card-icon">⛨</div><h3>VERIFY</h3><p>Check manufacturer limits, local road rules, battery condition and braking performance.</p><span class="tag">VALIDATE</span></article>
+    <section class="section model-section" id="modelle">
+      <div class="section-heading"><p class="eyebrow">/ 01 — MODELLDATENBANK</p><h2>WELCHEN SCOOTER FÄHRST DU?</h2><p>Suche nach Marke oder Modell. Die Liste ist ein erweiterbarer Startbestand – nicht jedes Modell und jede Variante ist bereits vollständig dokumentiert.</p></div>
+      <div class="model-search panel">
+        <label for="modelSearch">Marke oder Modell suchen</label>
+        <input id="modelSearch" type="search" placeholder="z. B. Segway ZT3 Pro, Xiaomi 4 Ultra, NIU KQi3 …" autocomplete="off">
+        <div class="filter-row"><label for="brandFilter">Marke filtern</label><select id="brandFilter"><option value="all">Alle Marken</option></select><span id="modelCount" class="result-count" aria-live="polite"></span></div>
+        <div id="modelResults" class="model-results" aria-live="polite"></div>
+        <p class="small-note">Hinweis: Ein Treffer bestätigt noch keine technische Spezifikation. Varianten, Baujahr, Controller und Firmware können sich unterscheiden.</p>
       </div>
     </section>
 
-    <section class="section lab-section" id="setup">
-      <div class="section-heading"><p class="eyebrow">/ 02 — INTERACTIVE TOOL</p><h2>SETUP LAB</h2><p>Use this checklist to prepare a safe baseline. It does not write to or modify your scooter.</p></div>
+    <section class="section" id="grundlagen">
+      <div class="section-heading"><p class="eyebrow">/ 02 — GRUNDLAGEN</p><h2>ERST VERSTEHEN, DANN ÄNDERN.</h2><p>Bevor du Firmware oder Controllerwerte anfasst, identifiziere die genaue Modellvariante und die verbauten Komponenten.</p></div>
+      <div class="card-grid">
+        <article class="info-card"><div class="card-number">01</div><div class="card-icon">⌁</div><h3>IDENTIFIZIEREN</h3><p>Notiere Modell, Baujahr, Hardware-Revision, Akku, Controller und Firmware-Version.</p><span class="tag">AUSGANGSDATEN</span></article>
+        <article class="info-card"><div class="card-number">02</div><div class="card-icon">⌘</div><h3>VERSTEHEN</h3><p>Finde heraus, was eine Einstellung tatsächlich verändert. Ähnliche Bezeichnungen können je nach Plattform etwas anderes bedeuten.</p><span class="tag">WISSEN</span></article>
+        <article class="info-card"><div class="card-number">03</div><div class="card-icon">⛨</div><h3>ÜBERPRÜFEN</h3><p>Prüfe Herstellerangaben, Akku-Zustand, Bremsleistung und geltende Vorschriften.</p><span class="tag">SICHERHEIT</span></article>
+      </div>
+    </section>
+
+    <section class="section lab-section" id="labor">
+      <div class="section-heading"><p class="eyebrow">/ 03 — INTERAKTIVES WERKZEUG</p><h2>DEIN EINSTELLUNGS-CHECK</h2><p>Erstelle eine persönliche Checkliste für die Vorbereitung. Dieses Werkzeug verbindet sich nicht mit deinem Scooter und schreibt keine Werte in die Hardware.</p></div>
       <div class="lab-layout">
         <form id="setupForm" class="panel">
-          <label for="model">Scooter model / variant</label><input id="model" name="model" placeholder="e.g. brand + exact model" autocomplete="off">
-          <label for="firmware">Firmware / controller version</label><input id="firmware" name="firmware" placeholder="Version if known" autocomplete="off">
-          <label for="goal">Main goal</label>
-          <select id="goal" name="goal"><option value="reliability">Reliability and battery life</option><option value="comfort">Smooth acceleration / comfort</option><option value="range">Range and efficiency</option><option value="diagnostics">Diagnostics and learning</option></select>
-          <fieldset><legend>Before changing anything, confirm:</legend>
-            <label class="check"><input type="checkbox" name="checks" value="backup"> I have a stock backup / recovery plan</label>
-            <label class="check"><input type="checkbox" name="checks" value="battery"> Battery and connectors look healthy</label>
-            <label class="check"><input type="checkbox" name="checks" value="brakes"> Brakes, tyres and lights are checked</label>
-            <label class="check"><input type="checkbox" name="checks" value="rules"> I checked manufacturer limits and local law</label>
+          <label for="model">Marke, Modell und Variante</label><input id="model" name="model" placeholder="z. B. Segway ZT3 Pro, 500-W-Version" autocomplete="off">
+          <label for="firmware">Firmware / Controller-Version</label><input id="firmware" name="firmware" placeholder="Version, falls bekannt" autocomplete="off">
+          <label for="goal">Dein Hauptziel</label>
+          <select id="goal" name="goal"><option value="reliability">Zuverlässigkeit und Akkulebensdauer</option><option value="comfort">Sanfte Beschleunigung und Fahrkomfort</option><option value="range">Reichweite und Effizienz</option><option value="diagnostics">Fehlersuche und Technik verstehen</option></select>
+          <fieldset><legend>Vor einer Änderung bestätigen:</legend>
+            <label class="check"><input type="checkbox" name="checks" value="backup"> Originaldaten gesichert / Wiederherstellung geklärt</label>
+            <label class="check"><input type="checkbox" name="checks" value="battery"> Akku und Steckverbindungen geprüft</label>
+            <label class="check"><input type="checkbox" name="checks" value="brakes"> Bremsen, Reifen und Beleuchtung geprüft</label>
+            <label class="check"><input type="checkbox" name="checks" value="rules"> Herstellergrenzen und geltende Regeln geprüft</label>
           </fieldset>
-          <button class="button primary full" type="submit">GENERATE MY CHECKLIST ↗</button>
+          <button class="button primary full" type="submit">CHECKLISTE ERSTELLEN ↗</button>
         </form>
         <div class="panel output-panel" aria-live="polite">
-          <p class="eyebrow">YOUR BASELINE PLAN</p><h3 id="resultTitle">Ready when you are.</h3>
-          <p id="resultText">Enter your model and tick the checks to create a reminder list for your setup session.</p>
-          <ul id="resultList"><li>Record the original values before edits.</li><li>Change one variable at a time.</li><li>Stop if the scooter behaves unexpectedly.</li></ul>
-          <button id="copyPlan" class="button ghost full" type="button">COPY CHECKLIST</button><p class="small-note" id="copyStatus"></p>
+          <p class="eyebrow">DEIN BASISPLAN</p><h3 id="resultTitle">Bereit, wenn du es bist.</h3>
+          <p id="resultText">Trage dein Modell ein und markiere erledigte Prüfungen, um eine Erinnerungsliste zu erstellen.</p>
+          <ul id="resultList"><li>Ursprüngliche Werte dokumentieren.</li><li>Nur eine Änderung gleichzeitig vornehmen.</li><li>Bei unerwartetem Verhalten sofort abbrechen.</li></ul>
+          <button id="copyPlan" class="button ghost full" type="button">CHECKLISTE KOPIEREN</button><p class="small-note" id="copyStatus"></p>
         </div>
       </div>
     </section>
 
-    <section class="section safety-section" id="safety">
-      <div class="section-heading"><p class="eyebrow">/ 03 — NON-NEGOTIABLE</p><h2>POWER ISN'T THE ONLY LIMIT.</h2><p>More current or speed can increase heat, stress the battery and controller, and reduce braking margin.</p></div>
+    <section class="section safety-section" id="sicherheit">
+      <div class="section-heading"><p class="eyebrow">/ 04 — UNVERHANDELBAR</p><h2>LEISTUNG IST NICHT DIE EINZIGE GRENZE.</h2><p>Mehr Strom oder Geschwindigkeit kann Wärme und Bauteilbelastung erhöhen – und die Sicherheitsreserve beim Bremsen verringern.</p></div>
       <div class="safety-grid">
-        <div class="safety-item"><span class="warning">!</span><div><h3>BATTERY & CURRENT</h3><p>Never exceed verified cell, pack, BMS, wiring or controller ratings. A voltage or current label alone does not prove a safe operating limit.</p></div></div>
-        <div class="safety-item"><span class="warning">!</span><div><h3>FIRMWARE & FLASHING</h3><p>Unknown firmware can disable protections or brick a controller. Keep a verified stock backup and don't flash files for a different hardware revision.</p></div></div>
-        <div class="safety-item"><span class="warning">!</span><div><h3>ROAD LEGALITY</h3><p>Rules differ by country and vehicle approval. A modified scooter may no longer be legal or insured for public roads.</p></div></div>
-        <div class="safety-item"><span class="warning">!</span><div><h3>TESTING</h3><p>Inspect tyres, brakes, fasteners and connectors. Test conservatively in a safe private area, never in traffic while troubleshooting.</p></div></div>
+        <div class="safety-item"><span class="warning">!</span><div><h3>AKKU UND STROM</h3><p>Überschreite niemals verifizierte Grenzwerte von Zellen, Akkupack, BMS, Leitungen oder Controller. Ein einzelner Aufdruck belegt noch keinen sicheren Betriebswert.</p></div></div>
+        <div class="safety-item"><span class="warning">!</span><div><h3>FIRMWARE UND FLASHEN</h3><p>Unbekannte Firmware kann Schutzfunktionen beeinträchtigen oder den Controller unbrauchbar machen. Verwende keine Dateien für eine andere Hardware-Revision.</p></div></div>
+        <div class="safety-item"><span class="warning">!</span><div><h3>ZULASSUNG UND VERSICHERUNG</h3><p>In Deutschland können technische Änderungen die Betriebserlaubnis, Versicherung und Zulässigkeit im öffentlichen Verkehr beeinflussen. Prüfe die konkrete Rechtslage vor Änderungen.</p></div></div>
+        <div class="safety-item"><span class="warning">!</span><div><h3>PRÜFUNG UND TESTFAHRT</h3><p>Kontrolliere Reifen, Bremsen, Schrauben und Steckverbindungen. Teste vorsichtig an einem geeigneten sicheren Ort – niemals im Straßenverkehr bei der Fehlersuche.</p></div></div>
       </div>
     </section>
 
-    <section class="section" id="glossary">
-      <div class="section-heading"><p class="eyebrow">/ 04 — QUICK REFERENCE</p><h2>THE SHORT GLOSSARY.</h2><p>Tap a term to reveal a plain-language explanation.</p></div>
+    <section class="section" id="lexikon">
+      <div class="section-heading"><p class="eyebrow">/ 05 — NACHSCHLAGEWERK</p><h2>DAS TECHNIK-LEXIKON.</h2><p>Wähle einen Begriff aus, um die Erklärung in verständlicher Sprache zu lesen.</p></div>
       <div class="glossary">
-        <details><summary>BMS <span>+</span></summary><p>Battery Management System. It monitors and protects the battery pack according to its design and configured limits.</p></details>
-        <details><summary>Controller / MCU <span>+</span></summary><p>The electronics and firmware that manage motor operation. Exact meanings and settings depend on the scooter platform.</p></details>
-        <details><summary>Voltage (V) <span>+</span></summary><p>Electrical potential. Battery voltage changes with state of charge and load; nominal and fully charged voltage are not the same.</p></details>
-        <details><summary>Current (A) <span>+</span></summary><p>Electrical flow. Higher current can mean more heat and stress; safe limits depend on every part of the electrical system.</p></details>
-        <details><summary>Firmware backup <span>+</span></summary><p>A verified copy of the original firmware and configuration, plus a practical way to restore it if an update fails.</p></details>
+        <details><summary>BMS – Batteriemanagementsystem <span>+</span></summary><p>Überwacht und schützt den Akku entsprechend seiner Konstruktion und den konfigurierten Grenzwerten. Es ersetzt keine fachgerechte Auslegung des Akkus.</p></details>
+        <details><summary>Controller / MCU <span>+</span></summary><p>Elektronik und Firmware zur Steuerung des Motors. Die genaue Bedeutung und verfügbare Einstellungen unterscheiden sich je nach Scooter-Plattform.</p></details>
+        <details><summary>Spannung (V) <span>+</span></summary><p>Elektrische Potenzialdifferenz. Die Akkuspannung verändert sich mit Ladezustand und Belastung; Nennspannung und Ladeschlussspannung sind nicht dasselbe.</p></details>
+        <details><summary>Strom (A) <span>+</span></summary><p>Beschreibt den elektrischen Stromfluss. Höherer Strom kann mehr Wärme und Belastung bedeuten. Der sichere Grenzwert hängt vom gesamten elektrischen System ab.</p></details>
+        <details><summary>Firmware-Sicherung <span>+</span></summary><p>Eine überprüfte Kopie der Original-Firmware und Konfiguration – plus ein tatsächlich verfügbarer Weg zur Wiederherstellung, falls ein Update scheitert.</p></details>
+        <details><summary>Rekuperation <span>+</span></summary><p>Beim Verzögern wird der Motor als Generator genutzt, um Energie zurückzugewinnen. Wirkung und Einstellung hängen vom Fahrzeug ab und können das Fahrverhalten verändern.</p></details>
+        <details><summary>Nennleistung und Spitzenleistung <span>+</span></summary><p>Nennleistung beschreibt eine definierte Dauerleistung unter festgelegten Bedingungen; Spitzenleistung gilt nur begrenzt. Angaben sind nur vergleichbar, wenn die Messbedingungen bekannt sind.</p></details>
       </div>
     </section>
   </main>
 
-  <footer><a class="brand" href="#home"><span class="brand-mark">H//T</span><span>HOT TO <b>TUNE</b></span></a><p>Independent learning project · No remote access to your scooter · Verify all specifications.</p><a href="#home" class="back-top">BACK TO TOP ↑</a></footer>
+  <footer><a class="brand" href="#startseite"><span class="brand-mark">H//T</span><span>HOT TO <b>TUNE</b></span></a><p>Unabhängiges Wissensprojekt · Kein Fernzugriff auf Scooter · Technische Daten immer verifizieren.</p><a href="#startseite" class="back-top">NACH OBEN ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>

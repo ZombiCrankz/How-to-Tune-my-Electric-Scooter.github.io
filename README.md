@@ -1,28 +1,26 @@
-# HOT TO TUNE // Electric Scooter Lab
+# HOT TO TUNE – E-Scooter-Wissensdatenbank
 
-A responsive, cyberpunk-style static website for GitHub Pages.
+Eine responsive, deutschsprachige Website im dunklen Neon-/Cyberpunk-Stil. Gedacht als markenübergreifender Einstieg in Modellrecherche, Technikverständnis, Sicherheitsprüfungen und Einstellungsdokumentation.
 
-## Files
-- `index.html` — page structure and content
-- `style.css` — responsive dark neon styling
-- `script.js` — mobile navigation, interactive setup checklist, copy button
+## Dateien
+- `index.html` – deutsche Seitenstruktur und Inhalte
+- `style.css` – Layout, Farben und mobile Darstellung
+- `script.js` – Modellsuche, Markenfilter, Einstellungs-Checkliste und Kopierfunktion
 
-## Publish on GitHub Pages
-1. Sign in at https://github.com/
-2. Create a new **public** repository named `hot-to-tune-my-electric-scooter`.
-3. Upload `index.html`, `style.css`, `script.js`, and `README.md` to the repository root.
-4. Open **Settings → Pages**.
-5. Under **Build and deployment**, select **Deploy from a branch**.
-6. Select branch **main** and folder **/(root)**, then click **Save**.
-7. Wait a few minutes. The expected address is:
-   `https://YOUR-USERNAME.github.io/hot-to-tune-my-electric-scooter/`
-   Replace `YOUR-USERNAME` with your GitHub username.
+## Aktueller Stand
+- Die Modellsuche enthält einen kleinen Startbestand mehrerer Marken.
+- Ein Suchtreffer ist keine Bestätigung technischer Spezifikationen.
+- Modellvarianten, Baujahre, Firmwarestände und Controller müssen für technische Detailseiten einzeln verifiziert werden.
+- Die Website ist statisch. Sie speichert keine Nutzerdaten und greift nicht auf Scooter-Hardware zu.
 
-## Editing
-Edit a file on GitHub by opening it, clicking the pencil icon, making changes, and committing them. Pages usually republishes after a short delay.
+## Veröffentlichung mit GitHub Pages
+1. Bei https://github.com/ anmelden.
+2. Ein öffentliches Repository namens `hot-to-tune-my-electric-scooter` erstellen.
+3. `index.html`, `style.css`, `script.js` und `README.md` in das Stammverzeichnis hochladen.
+4. `Settings → Pages` öffnen.
+5. Bei „Build and deployment“ die Option „Deploy from a branch“ auswählen.
+6. Branch `main` und Ordner `/(root)` auswählen und speichern.
+7. Nach der Veröffentlichung lautet die Adresse voraussichtlich `https://DEIN-BENUTZERNAME.github.io/hot-to-tune-my-electric-scooter/`.
 
-## Notes
-- This is a static site. It does not store visitor data or connect to scooter hardware.
-- The interactive checklist runs in the visitor's browser only.
-- The Google Fonts import requires internet access; system fallback fonts remain available.
-- Safety content is general information, not a specification for a particular scooter.
+## Ausbau
+Als Nächstes können pro Modell eigene Detailseiten mit verifizierten technischen Daten, Quellen, Firmware-Hinweisen, Wartungsinformationen und versionsspezifischen Sicherheitshinweisen ergänzt werden.
